@@ -14,7 +14,9 @@
                 <th>Username</th>
                 <th>Email</th>
                 <th>Address</th>
-                <th>Them</th>
+                <th> 
+                    <a href="add.php">Them</a>
+                </th>
             </tr>
             <?php 
                 $sql = "SELECT * FROM hocsinh";
