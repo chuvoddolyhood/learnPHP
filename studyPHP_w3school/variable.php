@@ -2,6 +2,7 @@
     $var = 2;
     echo "var = $var"  . "<br/>";
     echo $var  . "<br/>";
+    var_dump($var);
 
     $string_name = "Nghia";
     echo "string_name: $string_name"  . "<br/>";
@@ -12,4 +13,5 @@
     for($i = 0; $i < 4; $i++){
         echo $var[$i] . "<br/>";
     }
+    var_dump($var);
 ?>
