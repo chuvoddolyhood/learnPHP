@@ -27,7 +27,10 @@
                 <td><?php echo $rows["Username"] ?></td>
                 <td><?php echo $rows["Email"] ?></td>
                 <td><?php echo $rows["Address"] ?></td>
-                <td>Sua | Xoa</td>
+                <td>
+                    <a href="modify.php?id= <?php echo $rows["id"] ?>">Sua</a> | 
+                    <a href="delete.php?id= <?php echo $rows["id"] ?>">Xoa</a>
+                </td>
             </tr>
             <?php } ?>
         </table>
