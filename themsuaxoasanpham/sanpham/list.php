@@ -13,7 +13,7 @@
             <table class="table">
                 <thead class="thead-dark">
                     <tr>
-                        <th>Số</th>
+                        <th>Số thứ tự</th>
                         <th>Tên sản phẩm</th>
                         <th>Ảnh sản phẩm</th>
                         <th>Giá sản phẩm</th>
@@ -37,8 +37,17 @@
                                 <td><?php echo $rows["quantitty"] ?></td>
                                 <td><?php echo $rows["description"] ?></td>
                                 <td><?php echo $rows["brand_name"] ?></td>
-                                <td>Sửa</td>
-                                <td>Xóa</td>
+                                <td>
+                                    <a href="index.php?page_layout=modify&id= <?php echo $rows["product_id"] ?>">
+                                        Sửa
+                                    </a>
+                                </td>
+                                <td>
+                                    <a onclick="return confirm_Del('<?php echo $rows['product_name'] ?>')" 
+                                       href="index.php?page_layout=delete&id= <?php echo $rows["product_id"] ?>">
+                                        Xóa
+                                    </a>
+                                </td>
                             </tr>
                         <?php } ?>
                     </tr>
@@ -48,3 +57,8 @@
         </div>
     </div>
 </div>
+<script>
+    function confirm_Del(name){
+        return confirm("Bạn có chắc muốn xóa sản phẩm "+ name + "?");
+    }
+</script>
